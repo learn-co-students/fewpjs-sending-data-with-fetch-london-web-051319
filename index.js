@@ -12,12 +12,8 @@ function submitData (name, email) {
     },
     body: JSON.stringify( {name, email} )
   })
-    .then(function (response) {
-      return response.json()
-    })
-    .then(function (object) {
-      body.append(object.id)
-    })
+    .then(response => response.json())
+    .then(object => body.append(object.id))
     .catch(function (error) {
       alert('Bad Request')
       body.append(error.message)
