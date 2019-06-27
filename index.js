@@ -14,5 +14,5 @@ function submitData (name, email) {
     .catch(function (error) {
       alert('Bad Request')
       body.append(error.message)
-    })
+  })
 }
